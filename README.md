@@ -88,13 +88,5 @@ Examine your MongoDB collection after running to see changes
 
 Compare execution times before/after indexing
 
-📝 Notes
-Ensure your MongoDB collection contains sufficient data (at least 10-15 books)
-
-For pagination to work properly, you need more than 10 books in your collection
-
-The connection string should be updated if using MongoDB Atlas
-
 🤝 Contributing
 Feel free to fork and modify this project for your own MongoDB learning purposes
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
