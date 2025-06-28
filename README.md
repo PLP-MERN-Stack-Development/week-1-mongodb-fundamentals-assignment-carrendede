@@ -1,47 +1,100 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19721823&assignment_repo_type=AssignmentRepo)
-# MongoDB Fundamentals Assignment
+# PLP Bookstore MongoDB Operations
 
-This assignment focuses on learning MongoDB fundamentals including setup, CRUD operations, advanced queries, aggregation pipelines, and indexing.
+This project demonstrates various MongoDB operations including CRUD operations, advanced queries, aggregation pipelines, and indexing for the PLP Bookstore database.
 
-## Assignment Overview
+## 📌 Prerequisites
 
-You will:
-1. Set up a MongoDB database
-2. Perform basic CRUD operations
-3. Write advanced queries with filtering, projection, and sorting
-4. Create aggregation pipelines for data analysis
-5. Implement indexing for performance optimization
+- Node.js installed (v14+ recommended)
+- MongoDB installed locally or access to a MongoDB Atlas cluster
+- MongoDB Node.js driver (`mongodb` package)
 
-## Getting Started
+## 🛠️ Setup Instructions
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+1. Clone this repository
+2. Install dependencies:
+   ```bash
+   npm install mongodb
+3. Set up your MongoDB connection:
 
-## Files Included
+For local MongoDB: Ensure MongoDB is running on mongodb://localhost:27017
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+For MongoDB Atlas: Replace the connection string in uri variable
 
-## Requirements
+📂 File Structure
+index.js: Contains all MongoDB operations including:
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+Basic CRUD operations
 
-## Submission
+Advanced queries with projection and sorting
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+Pagination implementation
 
-1. Complete all tasks in the assignment
-2. Add your `queries.js` file with all required MongoDB queries
-3. Include a screenshot of your MongoDB database
-4. Update the README.md with your specific setup instructions
+Aggregation pipelines
 
-## Resources
+Indexing and performance analysis
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
+🚀 Running the Application
+Execute the script with Node.js:
+
+bash
+node index.js
+🔍 Operations Included
+1. Basic CRUD Operations
+Find books by genre (Fantasy)
+
+Find books published in a specific year (1960)
+
+Find books by author (George Orwell)
+
+Update price of a book (The Alchemist)
+
+Delete a book by title (Moby Dick)
+
+2. Advanced Queries
+Find books in stock and published after 2010
+
+Projection to return only title, author, and price
+
+Sorting books by price (ascending and descending)
+
+Pagination with 5 books per page
+
+3. Aggregation and Indexing
+Created index on title field
+
+Created compound index on author and published_year
+
+Performance analysis using explain()
+
+📊 Expected Output
+The script will output:
+
+Results of each query operation
+
+Count of modified/deleted documents
+
+Pagination results for multiple pages
+
+Index creation confirmation
+
+Query execution stats from explain()
+
+🧪 Testing
+To verify the operations:
+
+Check console output for expected results
+
+Examine your MongoDB collection after running to see changes
+
+Compare execution times before/after indexing
+
+📝 Notes
+Ensure your MongoDB collection contains sufficient data (at least 10-15 books)
+
+For pagination to work properly, you need more than 10 books in your collection
+
+The connection string should be updated if using MongoDB Atlas
+
+🤝 Contributing
+Feel free to fork and modify this project for your own MongoDB learning purposes
 - [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
